@@ -1,20 +1,160 @@
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+    background-color: #202020;
+    font-size: 17px;
+    float: left;
+    width: 100%;
 }
 
-footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+footer .footer>div {
+    margin: auto;
+    max-width: 1160px;
+    padding: 40px 24px 24px;
 }
 
 footer .footer p {
-  margin: 0;
+    margin: 0;
+    color: #ebebeb;
+    font-size: 17px;
 }
 
-@media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
-  }
+footer .footer a {
+    text-decoration: underline;
+    color: #ebebeb;
+}
+
+footer .footer-top-bar {
+    margin-bottom: 50px;
+}
+
+footer .footer .section .default-content-wrapper p a .icon-wknd-logo-light {
+    background-color: transparent;
+}
+
+footer .footer .section .default-content-wrapper .button-container a.button {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+}
+
+footer .footer .section .default-content-wrapper p a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+}
+
+footer .footer .section .default-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+footer .footer .section .default-content-wrapper p {
+    gap: 20px;
+}
+
+footer .default-content-wrapper ul {
+    display: flex;
+    list-style: none;
+    position: relative;
+    right: 150px;
+    gap: 35px;
+}
+
+footer .default-content-wrapper p {
+    font-size: 9px;
+}
+
+footer .default-content-wrapper ul li a {
+    text-decoration: none;
+}
+
+footer .default-content-wrapper ul li a:hover {
+    text-decoration: underline;
+}
+
+footer .default-content-wrapper .icon-wknd-logo-light {
+    width: 128px !important;
+    height: 48px !important;
+}
+
+footer .default-content-wrapper p:last-child {
+    display: flex;
+    padding: 8px 0 0 0;
+    justify-content: space-around;
+}
+
+footer .default-content-wrapper p:last-child .icon {
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* font-family: wknd-icon-font!important; */
+    font-size: 1.25rem;
+    font-style: normal;
+    font-variant: normal;
+    color: #202020;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: none;
+}
+
+footer .default-content-wrapper p:last-child a {
+    padding: 10px 10px 5px 10px;
+    background-color: #ebebeb;
+}
+
+footer .default-content-wrapper p:last-child .icon.icon-facebook:before {
+    content: "";
+}
+
+footer .default-content-wrapper p:last-child .icon.icon-twitter:before {
+    content: "";
+}
+
+footer .default-content-wrapper p:last-child .icon.icon-instagram:before {
+    content: "";
+}
+
+footer .active-page a {
+    text-decoration: underline !important;
+}
+
+footer .default-content-wrapper p:last-child {
+    display: flex;
+    align-items: center;
+    font-size: var(--body-font-size-18);
+    font-family: var(--body-font-family);
+}
+
+footer .default-content-wrapper p:last-child strong {
+    margin-right: 15px;
+}
+
+footer .section:not(.footer-top-bar) {
+    margin-bottom: 15px;
+}
+
+footer .button-container a {
+    background: transparent;
+}
+
+@media (width >=900px) {
+    footer .footer>div {
+        padding: 40px 14px 24px;
+    }
+}
+
+@media (width<=768px) {
+    footer .footer .section .default-content-wrapper {
+        flex-direction: column;
+    }
+
+    footer .default-content-wrapper ul {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        right: 0;
+    }
+
 }
