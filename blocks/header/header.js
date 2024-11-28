@@ -149,9 +149,19 @@ export default async function decorate(block) {
 
   const navSections = nav.querySelector(".nav-sections");
   if (navSections) {
+    const currentUrl = window.location.pathname;
     navSections
       .querySelectorAll(":scope .default-content-wrapper > ul > li")
       .forEach((navSection) => {
+        const navLink = navSection.querySelector("a");
+        if (navLink) {
+          // Check if the link's href matches the current URL
+          const linkUrl = new URL(navLink.href, window.location.origin)
+            .pathname;
+          if (currentUrl === linkUrl) {
+            navSection.classList.add("active");
+          }
+        }
         if (navSection.querySelector("ul"))
           navSection.classList.add("nav-drop");
         navSection.addEventListener("click", () => {
@@ -189,7 +199,7 @@ export default async function decorate(block) {
   topBar.classList.add("header-topbar");
   block.prepend(topBar);
   topBar.innerHTML =
-    '<div></div><div class="header-markets"><span>Sign In</span><span class="icon icon-flag-us"></span>EN-US<span class="header-chevron-down"></span></div>';
+    '<div></div><div class="header-markets"><span><a href="/user-form">Sign In</a></span><span class="icon icon-flag-us"></span>EN-US<span class="header-chevron-down"></span></div>';
   block.append(navWrapper);
 }
 

@@ -1,0 +1,98 @@
+.tabs {
+    margin-right: 15%;
+}
+
+.tabs .tabs-list {
+    display: flex;
+    gap: 0.5ch;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+@media (min-width: 600px) {
+    .tabs .tabs-list {
+        font-size: var(--body-font-family);
+    }
+}
+
+@media (min-width: 900px) {
+    .tabs .tabs-list {
+        font-size: var(--body-font-family);
+    }
+}
+
+.tabs .tabs-list button {
+    flex: 0 0 max-content;
+    padding: 0.5em;
+    background-color: transparent;
+    color: initial;
+    font-weight: 400;
+    transition: background-color 0.2s;
+}
+
+.tabs .tabs-list button[aria-selected='true'] {
+    border-bottom: 1px solid var(--background-color);
+    background-color: #000;
+    color: white;
+}
+
+.tabs .tabs-panel {
+    margin-top: -1px;
+    overflow: hidden;
+}
+
+.tabs .tabs-panel[aria-hidden='true'] {
+    display: none;
+}
+
+/* Responsive grid layout for cards */
+.tabs .card-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+#current-adventures {
+    font-family: var(--heading-font-family);
+    color: #202020;
+    font-weight: normal;
+}
+#current-adventures::after {
+    border-bottom: 2px solid var(--brandPrimary, #ffea00);
+    content: "";
+    display: block;
+    padding-top: 8px;
+    width: 84px;
+}
+.tabs .card-item {
+    padding-top: 5%;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.tabs .card-item img {
+    width: 100%;
+    height: 75%;
+}
+
+.tabs .card-item h3 {
+    margin: 8px 0;
+    font-size: 18px;
+    color: #202020;
+    text-align: left;
+    text-transform: uppercase;
+    font-family: var(--body-font-family);
+}
+
+/* Control description with ellipsis after 2 lines */
+.tabs .card-item p {
+    font-size: 14px;
+    color: dimgray;
+    text-align: left;
+    text-transform: uppercase;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    /* Number of lines to display */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

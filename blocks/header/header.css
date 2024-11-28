@@ -22,10 +22,17 @@ header .nav-wrapper {
     text-transform: uppercase;
 }
 
+.header-markets span a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #ffffff;
+}
+
 header {
     position: fixed;
     width: 100%;
-    z-index: 2;
+    top: 0;
+    z-index: 6;
     height: calc(115 + 25px);
 }
 
@@ -90,7 +97,7 @@ header nav[aria-expanded='true'] {
     }
 }
 
-@media (width < 768px) {
+@media (width <=1024px) {
     .nav-sections .default-content-wrapper {
         display: flex;
         justify-content: flex-start;
@@ -209,10 +216,6 @@ header nav .nav-sections {
     visibility: hidden;
 }
 
-header nav .nav-sections ul>li:hover a {
-    background-color: #ffea00;
-}
-
 header nav .nav-sections ul>li a {
     padding: 15px;
     text-decoration: none;
@@ -230,6 +233,11 @@ header nav .nav-sections ul {
     list-style: none;
     padding-left: 0;
     font-size: var(--body-font-size-s);
+}
+
+header nav .nav-sections ul>li:hover a,
+header nav .nav-sections ul>li.active a {
+    background-color: #ffea00;
 }
 
 header nav .nav-sections ul>li {
@@ -283,7 +291,6 @@ header nav .nav-sections ul>li>ul>li {
 
     header nav .nav-sections ul {
         display: flex;
-        gap: 24px;
         margin: 0;
     }
 

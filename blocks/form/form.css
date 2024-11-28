@@ -1,3 +1,4 @@
+
 .form .field-wrapper {
     display: grid;
     grid-auto-flow: row;
@@ -11,7 +12,11 @@
     border: none;
     padding: 0;
   }
-  
+  .form-wrapper .form form .button-wrapper input{
+    background-color: #ffea00;
+    color: #202020;
+    border: none;
+  }
   .form form > .field-wrapper + .field-wrapper,
   .form form fieldset .field-wrapper + .field-wrapper {
     margin-top: 24px;

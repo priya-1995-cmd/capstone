@@ -1,0 +1,28 @@
+.list-article-wrapper .list-article ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
+    grid-gap: 24px;
+}
+
+.list-article-wrapper .list-article ul li picture img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.list-article-wrapper .list-article ul li p {
+    font-family: var(--about-font-family);
+    color: #202020;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.list-article-wrapper .list-article ul li .allarticle-title {
+    font-size: 18px;
+    font-weight: bold;
+}

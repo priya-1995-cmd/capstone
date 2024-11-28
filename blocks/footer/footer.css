@@ -1,5 +1,5 @@
 footer {
-    background-color: #202020;
+    background-color: var(--global-title-color);
     font-size: 17px;
     float: left;
     width: 100%;
@@ -58,7 +58,6 @@ footer .default-content-wrapper ul {
     display: flex;
     list-style: none;
     position: relative;
-    right: 150px;
     gap: 35px;
 }
 
@@ -143,18 +142,32 @@ footer .button-container a {
     footer .footer>div {
         padding: 40px 14px 24px;
     }
+    footer .default-content-wrapper ul {
+        right: 150px;
+    }
 }
+@media (width >=1024px) {
+    footer .default-content-wrapper ul {
+        right: 150px;
+    }
+}
+
 
 @media (width<=768px) {
     footer .footer .section .default-content-wrapper {
         flex-direction: column;
+        align-items: flex-start;
     }
 
     footer .default-content-wrapper ul {
         width: 100%;
-        justify-content: center;
+        justify-content: flex-start;
+        flex-direction: column;
         flex-wrap: wrap;
-        right: 0;
+        display: flex;
+        margin: 10px 0;
+        padding: 0;
+        gap: 0;
     }
 
 }

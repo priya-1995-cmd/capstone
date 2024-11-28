@@ -1,0 +1,74 @@
+.teaser>div {
+    display: grid;
+    grid-template-areas: "teaser";
+    align-items: end;
+    justify-items: center;
+}
+
+main .section .teaser-wrapper {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+.teaser-wrapper .teaser #climbing-new-zealand a {
+    color: #202020;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.teaser-wrapper .teaser p {
+    font-size: 18px;
+}
+
+.teaser>div>div {
+    grid-area: teaser;
+}
+
+/* teaser image */
+.teaser>div>div:first-child {
+    height: 40pc;
+    max-height: 40pc;
+    width: 100%;
+}
+
+/* teaser content */
+.teaser>div>div:last-child {
+    background-color: #fff;
+    min-height: 180px;
+    width: 90%;
+    padding: 0 30px;
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.75;
+}
+
+.teaser picture {
+    width: 100%;
+    height: 100%;
+}
+
+.teaser img {
+    margin-top: 0;
+    margin-bottom: 0;
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+    height: 100%;
+}
+
+.teaser h2 {
+    font-family: var(--heading-font-family);
+    margin: .5em 0;
+    color: #202020; 
+}
+
+.teaser h2 a {
+    color: #202020
+}
+
+/* @media (width <= 1024px) {
+    .teaser > div > div:last-child {
+        width: 100%;
+    }
+} */

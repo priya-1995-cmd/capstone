@@ -15,13 +15,19 @@
     --background-color: white;
     --light-color: #f8f8f8;
     --dark-color: #505050;
+    --blockquote-color: #ebebeb;
     --text-color: #131313;
     --link-color: #3b63fb;
     --link-hover-color: #1d3ecf;
+    --line-bottom-color: #ffea00;
+    --global-title-color: #202020;
 
     /* fonts */
-    --body-font-family: roboto, roboto-fallback, sans-serif;
-    --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+
+    --heading-font-family: "Asar", georgia, "Times New Roman", times, serif;
+    --body-font-family: "Source Sans Pro", "Helvetica Neue", helvetica, arial, sans-serif;
+    --fixed-font-family: "Roboto Mono", menlo, consolas, "Liberation Mono", monospace;
+    --about-font-family: "Arial, Helvetica, sans-serif" --font-weight-bold: 600;
 
     /* body sizes */
     --body-font-size-m: 22px;
@@ -239,6 +245,7 @@ main img {
     width: 24px;
 }
 
+
 .icon img {
     width: 100%;
 }
@@ -256,6 +263,7 @@ main>.section>div {
 
 main>.section:first-of-type {
     margin-top: 0;
+    padding-top: 200px;
 }
 
 @media (width >=900px) {
@@ -270,4 +278,51 @@ main .section.highlight {
     background-color: var(--light-color);
     margin: 0;
     padding: 40px 0;
+}
+
+#next-adventures::after {
+    border-bottom: 2px solid var(--brandPrimary, #ffea00);
+    content: "";
+    display: block;
+    padding-top: 8px;
+    width: 84px;
+}
+
+#next-adventures {
+    font-family: var(--heading-font-family);
+    margin-bottom: 15px;
+    color: var(--global-title-color);
+}
+
+.magazinepage #magazine {
+    margin: 0;
+}
+
+.horizontal-line {
+    border-bottom: 1px solid #202020;
+    margin: 30px;
+}
+
+#adventures {
+    font-family: var(--heading-font-family);
+    font-weight: normal;
+}
+
+#magazine {
+    font-family: var(--heading-font-family);
+    font-weight: normal;
+}
+
+#members-only strong {
+    font-family: var(--body-font-family);
+    font-weight: normal;
+    color: #202020;
+}
+
+#members-only::after {
+    border-bottom: 2px solid var(--brandPrimary, #ffea00);
+    content: "";
+    display: block;
+    padding-top: 8px;
+    width: 84px;
 }

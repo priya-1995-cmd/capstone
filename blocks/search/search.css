@@ -8,12 +8,17 @@
     top: 10px;
 }
 
+.search-box .icon-search {
+    position: relative;
+    left: 40px;
+}
+
 .search .search-box input {
     box-sizing: border-box;
     display: block;
-    width: 100%;
+    width: 90%;
     margin: 0;
-    padding: 0.5em;
+    padding: 10px 30px;
     border: none;
     background-color: #ebebeb8a;
     color: var(--text-color);
@@ -139,7 +144,7 @@
 
 @media (width < 768px) {
     .search-container .search-wrapper .search .search-box {
-        display: none;
+        width: 160px;
+        left: 100px;
     }
-
 }
