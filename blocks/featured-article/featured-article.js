@@ -74,7 +74,7 @@ export default async function decorate($block) {
   }
 
   $block.replaceChildren($image, $text);
-  //placeholder condtions
+  //placeholder condition
   const defaultPlaceholder = "";
   const { readMore } = placeholders;
   console.log(readMore);

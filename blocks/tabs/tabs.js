@@ -1,7 +1,6 @@
 // eslint-disable-next-line import/no-unresolved
 import { toClassName } from "../../scripts/aem.js";
 
-// Sample data for each tab (e.g., replace with actual data as needed)
 const tabData = {
   all: [
     {
@@ -175,9 +174,9 @@ const tabData = {
       description:
         "Yosemite National Park, designated a World Heritage Site in 1984",
     },
-  ], // Repeat for other tabs: cycling, skiing, , travel
+  ],
 };
-//   {image:'',title:'',description:''},
+//   sample data tabs
 export default async function decorate(block) {
   // Build the tablist
   const tablist = document.createElement("div");

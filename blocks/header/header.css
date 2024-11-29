@@ -193,6 +193,11 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
         visibility: hidden;
     }
 }
+@media (width <1024px) {
+    header nav .nav-sections ul>li {
+        margin: 20px 0;
+    }
+}
 
 /* brand */
 header .nav-brand {

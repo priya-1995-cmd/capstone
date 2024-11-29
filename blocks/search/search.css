@@ -17,6 +17,7 @@
     box-sizing: border-box;
     display: block;
     width: 90%;
+    text-transform: uppercase;
     margin: 0;
     padding: 10px 30px;
     border: none;
