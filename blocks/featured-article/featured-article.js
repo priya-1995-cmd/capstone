@@ -1,3 +1,7 @@
+import { fetchPlaceholders } from "../../scripts/aem.js";
+
+const placeholders = await fetchPlaceholders("");
+
 /**
  * Loads a fragment.
  * @param {string} path The path to the fragment
@@ -70,4 +74,14 @@ export default async function decorate($block) {
   }
 
   $block.replaceChildren($image, $text);
+  //placeholder condtions
+  const defaultPlaceholder = "";
+  const { readMore } = placeholders;
+  console.log(readMore);
+  const readBtn = document.querySelector(".featured-article .text div>a");
+  if (window.location.href.includes("magazine")) {
+    if (readBtn) {
+      readBtn.textContent = readMore || defaultPlaceholder;
+    }
+  }
 }
