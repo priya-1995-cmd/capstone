@@ -1,14 +1,17 @@
-.teaser>div {
+.teaser > div {
     display: grid;
     grid-template-areas: "teaser";
-    align-items: end;
-    justify-items: center;
+    place-items: end center;
 }
 
 main .section .teaser-wrapper {
     padding: 0;
     margin: 0;
     max-width: 100%;
+}
+
+.teaser h2 a {
+    color: #202020
 }
 
 .teaser-wrapper .teaser #climbing-new-zealand a {
@@ -61,10 +64,6 @@ main .section .teaser-wrapper {
     font-family: var(--heading-font-family);
     margin: .5em 0;
     color: #202020; 
-}
-
-.teaser h2 a {
-    color: #202020
 }
 
 /* @media (width <= 1024px) {

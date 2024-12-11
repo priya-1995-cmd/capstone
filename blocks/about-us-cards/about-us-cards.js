@@ -4,27 +4,27 @@ async function fetchData(jsonURL) {
   const dataValue = data;
   const reqDataValue = dataValue.data;
 
-  const titleDescCont = document.createElement("div");
-  titleDescCont.classList.add("title-desc-details");
+  const titleDescCont = document.createElement('div');
+  titleDescCont.classList.add('title-desc-details');
 
   reqDataValue.forEach((el) => {
-    const allImages = document.createElement("div");
-    allImages.classList.add("image-list");
+    const allImages = document.createElement('div');
+    allImages.classList.add('image-list');
     allImages.innerHTML = el.Image;
     titleDescCont.appendChild(allImages);
 
-    const allName = document.createElement("div");
-    allName.classList.add("name-list");
+    const allName = document.createElement('div');
+    allName.classList.add('name-list');
     allName.innerHTML = el.Name;
     titleDescCont.appendChild(allName);
 
-    const allTeach = document.createElement("div");
-    allTeach.classList.add("teach-list");
+    const allTeach = document.createElement('div');
+    allTeach.classList.add('teach-list');
     allTeach.innerHTML = el.Teachnology;
     titleDescCont.appendChild(allTeach);
 
-    const allIcons = document.createElement("div");
-    allIcons.classList.add("icons-list");
+    const allIcons = document.createElement('div');
+    allIcons.classList.add('icons-list');
     allIcons.innerHTML = el.Icons;
     titleDescCont.appendChild(allIcons);
   });
@@ -34,8 +34,8 @@ async function fetchData(jsonURL) {
 
 export default async function decorate(block) {
   const termsCondJson = block.querySelector('a[href$=".json"]');
-  const completeData = document.createElement("div");
-  completeData.classList.add("terms-cond-block");
+  const completeData = document.createElement('div');
+  completeData.classList.add('terms-cond-block');
 
   const allHrefs = termsCondJson.href;
 

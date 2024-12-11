@@ -281,7 +281,7 @@ main .section.highlight {
 }
 
 #next-adventures::after {
-    border-bottom: 2px solid var(--brandPrimary, #ffea00);
+    border-bottom: 2px solid #ffea00;
     content: "";
     display: block;
     padding-top: 8px;
@@ -292,6 +292,11 @@ main .section.highlight {
     font-family: var(--heading-font-family);
     margin-bottom: 15px;
     color: var(--global-title-color);
+}
+
+#magazine {
+    font-family: var(--heading-font-family);
+    font-weight: normal;
 }
 
 .magazinepage #magazine {
@@ -308,10 +313,6 @@ main .section.highlight {
     font-weight: normal;
 }
 
-#magazine {
-    font-family: var(--heading-font-family);
-    font-weight: normal;
-}
 
 #members-only strong {
     font-family: var(--body-font-family);
@@ -320,7 +321,7 @@ main .section.highlight {
 }
 
 #members-only::after {
-    border-bottom: 2px solid var(--brandPrimary, #ffea00);
+    border-bottom: 2px solid #ffea00;
     content: "";
     display: block;
     padding-top: 8px;

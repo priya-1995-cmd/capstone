@@ -4,10 +4,6 @@ main .section .carousel-container {
 
 main .section .carousel-wrapper {
     max-width: unset;
-
-}
-
-main .section .carousel-wrapper {
     padding: 0;
 }
 
@@ -33,7 +29,6 @@ main .section .carousel-wrapper {
     flex: 0 0 100%;
     scroll-snap-align: start;
     display: flex;
-
     justify-content: center;
     position: relative;
     width: 100%;
@@ -62,10 +57,10 @@ main .section .carousel-wrapper {
 .carousel .carousel-slide .carousel-slide-content {
     z-index: 1;
     margin: 80px 30px;
-    padding: 0px 30px;
+    padding: 0 30px;
     top: 5rem;
     color: #202020;
-    background-color: #ffffff;
+    background-color: #fff;
     position: relative;
     width: 71pc;
 }
@@ -109,18 +104,6 @@ main .section .carousel-wrapper {
     background-color: var(--text-color);
 }
 
-.carousel .carousel-navigation-buttons {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 12px;
-    right: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1;
-}
-
 /* stylelint-disable-next-line no-descending-specificity */
 .carousel .carousel-navigation-buttons {
     position: relative;
@@ -128,6 +111,9 @@ main .section .carousel-wrapper {
     justify-content: flex-end;
     align-items: center;
     z-index: 2;
+    transform: translateY(-50%);
+    left: 12px;
+    right: 12px;
     display: flex;
 }
 
@@ -146,7 +132,7 @@ main .section .carousel-wrapper {
     font-size: 25px;
     border-bottom: 0;
     border-left: 0;
-    color: #000000;
+    color: #000;
     transform: rotate(180deg);
     position: relative;
     padding-left: 8px;
@@ -158,12 +144,10 @@ main .section .carousel-wrapper {
     padding-right: 0;
 }
 
-
 @media (width >=900px) {
     .carousel .carousel-navigation-buttons {
         left: 0;
         right: 0;
-
     }
 
     .carousel .carousel-slide .carousel-slide-content[data-align='justify'] {

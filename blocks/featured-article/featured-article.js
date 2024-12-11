@@ -1,6 +1,6 @@
-import { fetchPlaceholders } from "../../scripts/aem.js";
+import { fetchPlaceholders } from '../../scripts/aem.js';
 
-const placeholders = await fetchPlaceholders("");
+const placeholders = await fetchPlaceholders('');
 
 /**
  * Loads a fragment.
@@ -8,11 +8,11 @@ const placeholders = await fetchPlaceholders("");
  * @returns {Document} The document
  */
 async function loadFragment(path) {
-  if (path && path.startsWith("/")) {
+  if (path && path.startsWith('/')) {
     const resp = await fetch(path);
     if (resp.ok) {
       const parser = new DOMParser();
-      return parser.parseFromString(await resp.text(), "text/html");
+      return parser.parseFromString(await resp.text(), 'text/html');
     }
   }
   return null;
@@ -25,60 +25,60 @@ async function loadFragment(path) {
  * @returns {string} The metadata value(s)
  */
 function getMetadata(name, doc = document) {
-  const attr = name && name.includes(":") ? "property" : "name";
+  const attr = name && name.includes(':') ? 'property' : 'name';
   const meta = [...doc.head.querySelectorAll(`meta[${attr}="${name}"]`)]
     .map((m) => m.content)
-    .join(", ");
-  return meta || "";
+    .join(', ');
+  return meta || '';
 }
 
 /**
  * @param {HTMLElement} $block The header block element
  */
 export default async function decorate($block) {
-  const link = $block.querySelector("a");
-  const path = link ? link.getAttribute("href") : $block.textContent.trim();
+  const link = $block.querySelector('a');
+  const path = link ? link.getAttribute('href') : $block.textContent.trim();
   const doc = await loadFragment(path);
   if (!doc) {
     return;
   }
   // find metadata
-  const title = getMetadata("og:title", doc);
-  const desc = getMetadata("og:description", doc);
+  const title = getMetadata('og:title', doc);
+  const desc = getMetadata('og:description', doc);
 
-  const $pre = document.createElement("p");
-  $pre.classList.add("pretitle");
-  $pre.textContent = "Featured Article";
+  const $pre = document.createElement('p');
+  $pre.classList.add('pretitle');
+  $pre.textContent = 'Featured Article';
 
-  const $h2 = document.createElement("h2");
+  const $h2 = document.createElement('h2');
   $h2.textContent = title;
 
-  const $p = document.createElement("p");
+  const $p = document.createElement('p');
   $p.textContent = desc;
 
-  const $link = document.createElement("div");
+  const $link = document.createElement('div');
   $link.append(link);
-  link.textContent = "FULL ARTICLE";
-  link.className = "button primary";
+  link.textContent = 'FULL ARTICLE';
+  link.className = 'button primary';
 
-  const $text = document.createElement("div");
-  $text.classList.add("text");
+  const $text = document.createElement('div');
+  $text.classList.add('text');
   $text.append($pre, $h2, $p, $link);
 
-  const $image = document.createElement("div");
-  $image.classList.add("image");
+  const $image = document.createElement('div');
+  $image.classList.add('image');
   // find image
-  const $hero = doc.querySelector("body > main picture");
+  const $hero = doc.querySelector('body > main picture');
   if ($hero) {
     $image.append($hero);
   }
 
   $block.replaceChildren($image, $text);
-  //placeholder condition
-  const defaultPlaceholder = "";
+  // placeholder condition
+  const defaultPlaceholder = '';
   const { readMore } = placeholders;
-  const readBtn = document.querySelector(".featured-article .text div>a");
-  if (window.location.href.includes("magazine")) {
+  const readBtn = document.querySelector('.featured-article .text div>a');
+  if (window.location.href.includes('magazine')) {
     if (readBtn) {
       readBtn.textContent = readMore || defaultPlaceholder;
     }

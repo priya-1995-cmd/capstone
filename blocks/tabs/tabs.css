@@ -9,13 +9,13 @@
     overflow-x: auto;
 }
 
-@media (min-width: 600px) {
+@media (width >=600px) {
     .tabs .tabs-list {
         font-size: var(--body-font-family);
     }
 }
 
-@media (min-width: 900px) {
+@media (width >=900px) {
     .tabs .tabs-list {
         font-size: var(--body-font-family);
     }
@@ -51,18 +51,21 @@
     gap: 16px;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
+
 #current-adventures {
     font-family: var(--heading-font-family);
     color: #202020;
     font-weight: normal;
 }
+
 #current-adventures::after {
-    border-bottom: 2px solid var(--brandPrimary, #ffea00);
+    border-bottom: 2px solid #ffea00;
     content: "";
     display: block;
     padding-top: 8px;
     width: 84px;
 }
+
 .tabs .card-item {
     padding-top: 5%;
     text-align: center;
@@ -91,7 +94,6 @@
     text-transform: uppercase;
     display: -webkit-box;
     -webkit-line-clamp: 1;
-    /* Number of lines to display */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
