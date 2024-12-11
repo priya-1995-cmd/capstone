@@ -19,5 +19,9 @@ indices:
        select: head > meta[name="description"]
        value: |
         attribute(el, 'content')
+      template:
+       select: head > meta[name="template"]
+       value: |
+        attribute(el, 'content')
 
       

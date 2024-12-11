@@ -77,7 +77,6 @@ export default async function decorate($block) {
   //placeholder condition
   const defaultPlaceholder = "";
   const { readMore } = placeholders;
-  console.log(readMore);
   const readBtn = document.querySelector(".featured-article .text div>a");
   if (window.location.href.includes("magazine")) {
     if (readBtn) {
